@@ -6,6 +6,14 @@ const musicTracks = [
 
 const audio = document.getElementById('audio');
 const playButton = document.getElementById('playButton');
+const video = document.getElementById('robot-video');
+
+// Attempt to play the video when the page loads
+window.addEventListener('load', () => {
+    video.play().catch(error => {
+        console.error('Error attempting to play the video:', error);
+    });
+});
 
 playButton.addEventListener('click', playRandomMusic);
 
