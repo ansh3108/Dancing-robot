@@ -23,5 +23,7 @@ function playRandomMusic() {
     
     audio.src = randomTrack.src;
     audio.type = randomTrack.type;
-    audio.play();
+    audio.play().catch(error => {
+        console.error('Error attempting to play the audio:', error);
+    });
 }
