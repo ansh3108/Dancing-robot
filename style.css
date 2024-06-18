@@ -1,17 +1,16 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+body, html {
     margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 #robot-container {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 #robot-video {
@@ -20,8 +19,22 @@ body {
     object-fit: cover;
 }
 
-button {
+#playButton {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 10px 20px;
     font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#playButton:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(-50%) scale(1.1);
 }
